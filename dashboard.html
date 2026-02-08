@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Online Banking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>💳 Bank Dashboard</h2>
+
+    <p id="welcome"></p>
+    <p id="acc"></p>
+    <p id="ifsc"></p>
+    <p id="balance">Balance: ₹******</p>
+
+    <button onclick="checkBalance()">Check Balance</button>
+
+    <input type="number" id="amount" placeholder="Transfer Amount">
+    <input type="text" id="recipientAccount" placeholder="Recipient Account No" style="display: none;">
+    <input type="text" id="recipientIFSC" placeholder="Recipient IFSC Code" style="display: none;">
+    <button id="transferBtn" onclick="sendOTP()">Transfer Money</button>
+
+    <button onclick="toggleMode()">🌙 Dark / ☀ Light</button>
+    <button class="logout" onclick="logout()">Logout</button>
+
+    <h3>📄 Transaction History</h3>
+    <ul id="history"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
